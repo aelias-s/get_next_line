@@ -50,8 +50,22 @@ char	*get_next_line(int fd)
 		buf_len = read(fd, buf, BUFFER_SIZE);
 		rest = ft_find_rest(buf);
 	}
-	line = ft_strjoin(line, buf);
-	if (!buf_len)
-		return (NULL);
-	return (line);
+	if (buf_len)
+	{
+		line = ft_strjoin(line, ft_substr(buf, 0, BUFFER_SIZE - ft_strlen(rest)));
+		return (line);
+	}
+	free (buf);
+	return (NULL);
 }
+
+/*
+Falta finiquitar el tema de la última linea. Comprueba que el buf_len
+ sea 0 pero que line no este vacía (creo) olvitade de las lineas. Siempre se puede meter
+ un hachazo. El tema de los digitos feos que se escriben al principio entiendo que 
+ nos dara problema pero tu centrate en que salga todo el texto hasta el final.
+
+ Tienes el git de markel y unos 200 en github tranquilamente.
+ Mira muy bien el código antes de tocar cualquier cosa.
+ Un beso manin.
+ */
