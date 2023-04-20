@@ -1,0 +1,6 @@
+Esto es una prueba de texto.
+El único fin de este archivo de
+Texto es, de hecho, tener texto.
+A partir de esta línea, que es la 
+Tercera, escribiré textos de cualquier lado.
+patata
